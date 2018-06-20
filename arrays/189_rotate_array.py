@@ -21,7 +21,7 @@ def rotate_v1(array, k):
     """
     array = array[:]
     n = len(array)
-    for i in range(k):
+    for _ in range(k):
         temp = array[n - 1]
         for j in range(n-1, 0, -1):
             array[j] = array[j - 1]
@@ -59,3 +59,42 @@ def rotate_v3(array, k):
     length = len(array)
     k = k % length
     return array[length - k:] + array[:length - k]
+
+
+def rotate(nums, k):
+    # return nums[-k:]+nums[:len(nums)-k]
+    """
+        :type nums: List[int]
+        :type k: int
+        :rtype: void Do not return anything, modify nums in-place instead.
+    """
+    # 长度限制
+    k = k % len(nums)
+    remove_list = nums[-k:]
+    second_list = nums[:len(nums) - k]
+    nums[:k] = remove_list
+    nums[k:] = second_list
+    return nums
+
+
+def test_rotate_array():
+    nums = [1, 2, 3, 4, 5, 6, 7]
+    k = 5
+
+    target = [3, 4, 5, 6, 7, 1, 2]
+
+    nums = rotate(nums, k)
+    print(nums)
+    assert nums == target
+
+def test_rotate_array_k(k=3):
+    nums = [1, 2]
+    target = [2, 1]
+
+    nums = rotate(nums, k)
+    print(nums)
+    assert nums == target
+
+
+
+test_rotate_array()
