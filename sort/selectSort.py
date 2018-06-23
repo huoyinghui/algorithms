@@ -22,4 +22,3 @@ def selectSort(nums):
 def test_selectSort():
     nums = [3, 5, 1, 2]
     assert sorted(nums) == selectSort(nums)
-    pass
