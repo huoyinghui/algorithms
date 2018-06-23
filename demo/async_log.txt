@@ -1,0 +1,26 @@
+2018/06/21 09:58:16:       __init__:   65   DEBUG:   asyncio:Using selector: KqueueSelector
+2018/06/21 09:58:16:           main:   40   DEBUG: async_log:[<coroutine object myWorkerLock at 0x1082fd9e8>, <coroutine object myWorkerLock at 0x1082fda40>, <coroutine object myWorkerSem at 0x1082fdb48>, <coroutine object myWorkerSem at 0x1082fdba0>]
+2018/06/21 09:58:16:    myWorkerSem:   28   DEBUG: async_log:Successfully acquired the semaphore id:140736088327040
+2018/06/21 09:58:16:    myWorkerSem:   28   DEBUG: async_log:Successfully acquired the semaphore id:140736088327040
+2018/06/21 09:58:16:   myWorkerLock:   16   DEBUG: async_log:Attempting to attain lock
+2018/06/21 09:58:16:   myWorkerLock:   20   DEBUG: async_log:Currently Locked
+2018/06/21 09:58:16:   myWorkerLock:   16   DEBUG: async_log:Attempting to attain lock
+2018/06/21 09:58:19:    myWorkerSem:   30   DEBUG: async_log:Releasing Semaphore
+2018/06/21 09:58:19:    myWorkerSem:   30   DEBUG: async_log:Releasing Semaphore
+2018/06/21 09:58:19:   myWorkerLock:   24   DEBUG: async_log:Unlocked Critical Section
+2018/06/21 09:58:19:   myWorkerLock:   20   DEBUG: async_log:Currently Locked
+2018/06/21 09:58:22:   myWorkerLock:   24   DEBUG: async_log:Unlocked Critical Section
+2018/06/21 09:58:22:           main:   42   DEBUG: async_log:Main Coroutine end
+2018/06/21 05:46:36:       __init__:   65   DEBUG:   asyncio:Using selector: KqueueSelector
+2018/06/21 05:46:36:           main:   44   DEBUG: async_log:[<coroutine object myWorkerLock at 0x104624a98>, <coroutine object myWorkerLock at 0x104624af0>, <coroutine object myWorkerSem at 0x104624bf8>, <coroutine object myWorkerSem at 0x104624c50>]
+2018/06/21 05:46:36:    myWorkerSem:   32   DEBUG: async_log:Successfully acquired the semaphore id:140736088327040
+2018/06/21 05:46:36:   myWorkerLock:   16   DEBUG: async_log:Attempting to attain lock
+2018/06/21 05:46:36:   myWorkerLock:   20   DEBUG: async_log:Currently Locked
+2018/06/21 05:46:36:    myWorkerSem:   32   DEBUG: async_log:Successfully acquired the semaphore id:140736088327040
+2018/06/21 05:46:36:   myWorkerLock:   16   DEBUG: async_log:Attempting to attain lock
+2018/06/21 05:46:39:    myWorkerSem:   34   DEBUG: async_log:Releasing Semaphore
+2018/06/21 05:46:39:   myWorkerLock:   28   DEBUG: async_log:Unlocked Critical Section
+2018/06/21 05:46:39:    myWorkerSem:   34   DEBUG: async_log:Releasing Semaphore
+2018/06/21 05:46:39:   myWorkerLock:   20   DEBUG: async_log:Currently Locked
+2018/06/21 05:46:42:   myWorkerLock:   28   DEBUG: async_log:Unlocked Critical Section
+2018/06/21 05:46:42:           main:   46   DEBUG: async_log:Main Coroutine end

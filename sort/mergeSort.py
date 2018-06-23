@@ -7,15 +7,37 @@ def mergeList(left, right):
     assert sorted(left) == left
     assert sorted(right) == right
 
-    return sorted(left+right)
+    ret = []
+    index_left = 0
+    idnex_right = 0
+
+    while index_left < len(left) and idnex_right < len(right):
+        min_value = left[index_left]
+        if left[index_left] < right[idnex_right]:
+            index_left += 1
+        else:
+            min_value = right[idnex_right]
+            idnex_right += 1
+        ret.append(min_value)
+    # left
+    if index_left < len(left):
+        ret.extend(left[index_left:])
+    
+    if idnex_right < len(right):
+        ret.extend(right[idnex_right:])
+
+    print(ret, index_left, idnex_right, left, right)
+    return ret
+    # return sorted(left+right)
 
 def mergeSort(nums):
     """
     1.分治
     2.合并, 两个有序list
     """
-    if len(nums) <= 2:
-        return [min(nums), max(nums)]
+    if len(nums) <= 1:
+        # return [min(nums), max(nums)]
+        return nums
 
     mid = len(nums)//2
     left = mergeSort(nums[:mid])
