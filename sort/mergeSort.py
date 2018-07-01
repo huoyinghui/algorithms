@@ -22,7 +22,8 @@ def mergeList(left, right):
     # left
     if index_left < len(left):
         ret.extend(left[index_left:])
-    
+
+    # right
     if idnex_right < len(right):
         ret.extend(right[idnex_right:])
 

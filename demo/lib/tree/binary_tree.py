@@ -60,6 +60,19 @@ class BinTree(object):
         self.after_order_trav(subtree.right)
         print(subtree.data)
 
+    def reverse(self, subtree):
+        """
+        递归交换左右节点
+        """
+
+        if subtree is not None:
+            return
+        
+        subtree.left, subtree.right = subtree.right, subtree.left
+        # 递归左子树
+        self.reverse(subtree.left)
+        # 递归右子树
+        self.reverse(subtree.right)
 
 node_list = [
     {'data':'A', 'left':'B', 'right':'C', 'is_root':True},
